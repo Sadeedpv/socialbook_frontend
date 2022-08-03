@@ -24,8 +24,8 @@ function Body() {
     if (localStorage.getItem(id) === null) {
       axios.patch(`${baseUrl}/posts/likepost/${id}`)
       .then(res => {
-        console.log(res.data);
         localStorage.setItem(id, 'true');
+        window.location.reload();
       })      
     }
   }
@@ -94,7 +94,7 @@ function Body() {
             })}
           </div>
           <div className='d-flex justify-content-between align-items-center mt-3'>
-            <h3><BsHeartFill color={localStorage.getItem(post.id)? 'red':'gray'}  
+            <h3><BsHeartFill color={localStorage.getItem(post._id)? 'red':'gray'}  
             onClick={() =>{
               handleClick(post._id);
             }}
