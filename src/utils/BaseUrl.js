@@ -1,1 +1,1 @@
-export const baseUrl = 'https://socialbookmedia.herokuapp.com';
+export const baseUrl = process.env.REACT_APP_BACKEND_URL;

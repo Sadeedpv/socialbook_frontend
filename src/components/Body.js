@@ -89,7 +89,9 @@ function Body() {
           <div className='d-flex flex-column gap-3  mt-4'>
             {post.comments.map((comment, index) => {
               return (
-                <div key={index}><span className='fw-bolder'>{comment.creator} </span> {comment.comment}</div>
+                <div key={index} style={{
+                  fontSize: '1.4rem',
+                }}><span className='fw-bold'>{comment.creator} </span> {comment.comment}</div>
               )
             })}
           </div>

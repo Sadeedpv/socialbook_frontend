@@ -33,7 +33,7 @@ function Update() {
             "title": title,
             "caption": caption,
             "creator":post.creator,
-            "tags":tags.split(','),
+            "tags":tags instanceof Array ? tags:tags.split(','),
             "selectedFile":post.selectedFile
         }).then(() =>{
             navigate('/');
@@ -42,7 +42,7 @@ function Update() {
     
   return (
     <div className='d-flex align-items-center justify-content-center mt-5'>
-    <Form onClick={(e) =>{
+    <Form onSubmit={(e) =>{
         e.preventDefault();
         handleSubmit();
     }}>
@@ -54,7 +54,9 @@ function Update() {
       <Form.Group className="mb-4" >
         <Form.Label>Title</Form.Label>
         <Form.Control type="text" value={title} 
-        onChange={(e) => settitle(e.target.value)}
+        onChange={(e) => {
+          settitle(e.target.value)
+        }}
         />
       </Form.Group>
 
