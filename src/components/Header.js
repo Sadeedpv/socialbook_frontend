@@ -10,7 +10,7 @@ import icon from '../assets/images/instagram.png'
 function Header() {
   return (
     <>
-    <Navbar bg="white" expand="lg" className='shadow-sm '>
+    <Navbar bg="white" className='shadow-sm '>
       <Container>
         <Navbar.Brand href="/"><img src={icon} alt='' className='img-fluid ' style={{
           objectFit: 'contain',
@@ -19,8 +19,6 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav align-middle">
           <Nav className="ms-auto align-items-center d-flex justify-content-center">
-            <Nav.Link href="/" className='pe-5' >Home</Nav.Link>
-            <Nav.Link href="/" className='pe-5'>Trending</Nav.Link>
             <Nav.Link href="/addposts" className='pe-5'><Button variant="primary">New Post <BsPlus size={25} /> </Button></Nav.Link>
           </Nav>
         </Navbar.Collapse>

@@ -79,7 +79,7 @@ function Body() {
           <img src={post.selectedFile || 'https://user-images.githubusercontent.com/194400/49531010-48dad180-f8b1-11e8-8d89-1e61320e1d82.png'} alt='Preview' className='img-fluid' />
           <h2 className='mt-3'>{post.title}</h2>
           <h5 className='text-muted'>{post.caption}</h5>
-          <div className='d-flex gap-3 text-primary mt-4'>
+          <div className='d-flex gap-3 text-primary mt-4 flex-wrap'>
             {post.tags.map((tag, index) => {
               return (
                 <span key={index}>#{tag}</span>
