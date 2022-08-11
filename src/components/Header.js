@@ -19,7 +19,7 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav align-middle">
           <Nav className="ms-auto align-items-center d-flex justify-content-center">
-            <Nav.Link href="/addposts" className='pe-5'><Button variant="primary">New Post <BsPlus size={25} /> </Button></Nav.Link>
+            <Nav.Link href="/addposts"><Button variant="primary">New Post <BsPlus size={25} /> </Button></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
